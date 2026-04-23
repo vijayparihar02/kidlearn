@@ -1,0 +1,211 @@
+import { r as reactExports } from "./index-Dv_H9hW9.js";
+const ALPHABET_DATA = [
+  { letter: "A", word: "Apple", emoji: "🍎" },
+  { letter: "B", word: "Ball", emoji: "⚽" },
+  { letter: "C", word: "Cat", emoji: "🐱" },
+  { letter: "D", word: "Dog", emoji: "🐶" },
+  { letter: "E", word: "Elephant", emoji: "🐘" },
+  { letter: "F", word: "Fish", emoji: "🐟" },
+  { letter: "G", word: "Giraffe", emoji: "🦒" },
+  { letter: "H", word: "House", emoji: "🏠" },
+  { letter: "I", word: "Ice Cream", emoji: "🍦" },
+  { letter: "J", word: "Jellyfish", emoji: "🪼" },
+  { letter: "K", word: "Kite", emoji: "🪁" },
+  { letter: "L", word: "Lion", emoji: "🦁" },
+  { letter: "M", word: "Moon", emoji: "🌙" },
+  { letter: "N", word: "Nest", emoji: "🪺" },
+  { letter: "O", word: "Orange", emoji: "🍊" },
+  { letter: "P", word: "Penguin", emoji: "🐧" },
+  { letter: "Q", word: "Queen", emoji: "👑" },
+  { letter: "R", word: "Rainbow", emoji: "🌈" },
+  { letter: "S", word: "Sun", emoji: "☀️" },
+  { letter: "T", word: "Tiger", emoji: "🐯" },
+  { letter: "U", word: "Umbrella", emoji: "☂️" },
+  { letter: "V", word: "Violin", emoji: "🎻" },
+  { letter: "W", word: "Whale", emoji: "🐋" },
+  { letter: "X", word: "Xylophone", emoji: "🎵" },
+  { letter: "Y", word: "Yacht", emoji: "⛵" },
+  { letter: "Z", word: "Zebra", emoji: "🦓" }
+];
+const NUMBERS_DATA = [
+  { number: 1, label: "One", emoji: "🌟" },
+  { number: 2, label: "Two", emoji: "🦋" },
+  { number: 3, label: "Three", emoji: "🌸" },
+  { number: 4, label: "Four", emoji: "🍀" },
+  { number: 5, label: "Five", emoji: "⭐" },
+  { number: 6, label: "Six", emoji: "🌈" },
+  { number: 7, label: "Seven", emoji: "🌙" },
+  { number: 8, label: "Eight", emoji: "🎈" },
+  { number: 9, label: "Nine", emoji: "💎" },
+  { number: 10, label: "Ten", emoji: "🏆" }
+];
+const ANIMALS_DATA = [
+  { name: "Dog", emoji: "🐶", sound: "Woof woof!" },
+  { name: "Cat", emoji: "🐱", sound: "Meow meow!" },
+  { name: "Cow", emoji: "🐮", sound: "Moo moo!" },
+  { name: "Duck", emoji: "🦆", sound: "Quack quack!" },
+  { name: "Lion", emoji: "🦁", sound: "Roar roar!" },
+  { name: "Elephant", emoji: "🐘", sound: "Trumpeting!" },
+  { name: "Frog", emoji: "🐸", sound: "Ribbit ribbit!" },
+  { name: "Monkey", emoji: "🐵", sound: "Ooh ooh ah ah!" },
+  { name: "Horse", emoji: "🐴", sound: "Neigh neigh!" },
+  { name: "Sheep", emoji: "🐑", sound: "Baa baa!" },
+  { name: "Pig", emoji: "🐷", sound: "Oink oink!" },
+  { name: "Bear", emoji: "🐻", sound: "Growl growl!" }
+];
+const QUIZ_QUESTIONS = [
+  {
+    questionText: "What letter does 🍎 Apple start with?",
+    options: ["A", "B", "C", "D"],
+    correctIndex: 0,
+    category: "alphabet"
+  },
+  {
+    questionText: "How many legs does a dog have?",
+    options: ["2", "4", "6", "8"],
+    correctIndex: 1,
+    category: "numbers"
+  },
+  {
+    questionText: "What sound does a cow make?",
+    options: ["Meow", "Woof", "Moo", "Quack"],
+    correctIndex: 2,
+    category: "animals"
+  },
+  {
+    questionText: "Which animal has a long neck?",
+    options: ["Elephant", "Giraffe", "Penguin", "Cat"],
+    correctIndex: 1,
+    category: "animals"
+  },
+  {
+    questionText: "What letter does 🌙 Moon start with?",
+    options: ["N", "M", "L", "K"],
+    correctIndex: 1,
+    category: "alphabet"
+  },
+  {
+    questionText: "What comes after 5?",
+    options: ["4", "7", "6", "8"],
+    correctIndex: 2,
+    category: "numbers"
+  },
+  {
+    questionText: "What sound does a duck make?",
+    options: ["Roar", "Meow", "Moo", "Quack"],
+    correctIndex: 3,
+    category: "animals"
+  },
+  {
+    questionText: "What letter does 🐯 Tiger start with?",
+    options: ["S", "T", "U", "V"],
+    correctIndex: 1,
+    category: "alphabet"
+  },
+  {
+    questionText: "How many fingers on one hand?",
+    options: ["4", "6", "5", "3"],
+    correctIndex: 2,
+    category: "numbers"
+  },
+  {
+    questionText: "Which animal says Meow?",
+    options: ["Dog", "Fish", "Cat", "Bird"],
+    correctIndex: 2,
+    category: "animals"
+  },
+  {
+    questionText: "What letter does 🐘 Elephant start with?",
+    options: ["F", "G", "D", "E"],
+    correctIndex: 3,
+    category: "alphabet"
+  },
+  {
+    questionText: "What comes before 3?",
+    options: ["4", "2", "5", "6"],
+    correctIndex: 1,
+    category: "numbers"
+  },
+  {
+    questionText: "What color is the sun?",
+    options: ["Blue", "Green", "Yellow", "Red"],
+    correctIndex: 2,
+    category: "colors"
+  },
+  {
+    questionText: "Which animal lives in the ocean?",
+    options: ["Lion", "Whale", "Monkey", "Horse"],
+    correctIndex: 1,
+    category: "animals"
+  },
+  {
+    questionText: "How many wheels does a bicycle have?",
+    options: ["3", "4", "1", "2"],
+    correctIndex: 3,
+    category: "numbers"
+  },
+  {
+    questionText: "What letter does 🌈 Rainbow start with?",
+    options: ["Q", "S", "R", "P"],
+    correctIndex: 2,
+    category: "alphabet"
+  },
+  {
+    questionText: "Which is the biggest animal?",
+    options: ["Cat", "Rabbit", "Elephant", "Mouse"],
+    correctIndex: 2,
+    category: "animals"
+  },
+  {
+    questionText: "What comes after 9?",
+    options: ["8", "7", "11", "10"],
+    correctIndex: 3,
+    category: "numbers"
+  },
+  {
+    questionText: "What letter does ☀️ Sun start with?",
+    options: ["S", "T", "R", "U"],
+    correctIndex: 0,
+    category: "alphabet"
+  },
+  {
+    questionText: "Which animal says Roar?",
+    options: ["Sheep", "Duck", "Lion", "Frog"],
+    correctIndex: 2,
+    category: "animals"
+  }
+];
+function useBackend() {
+  const fetchAlphabet = reactExports.useCallback(async () => {
+    try {
+      return ALPHABET_DATA;
+    } catch {
+      return ALPHABET_DATA;
+    }
+  }, []);
+  const fetchNumbers = reactExports.useCallback(async () => {
+    try {
+      return NUMBERS_DATA;
+    } catch {
+      return NUMBERS_DATA;
+    }
+  }, []);
+  const fetchAnimals = reactExports.useCallback(async () => {
+    try {
+      return ANIMALS_DATA;
+    } catch {
+      return ANIMALS_DATA;
+    }
+  }, []);
+  const fetchQuizQuestions = reactExports.useCallback(async () => {
+    try {
+      return QUIZ_QUESTIONS;
+    } catch {
+      return QUIZ_QUESTIONS;
+    }
+  }, []);
+  return { fetchAlphabet, fetchNumbers, fetchAnimals, fetchQuizQuestions };
+}
+export {
+  useBackend as u
+};

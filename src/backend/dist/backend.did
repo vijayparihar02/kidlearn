@@ -1,0 +1,31 @@
+type QuizQuestion = 
+ record {
+   category: text;
+   correctIndex: nat;
+   options: vec text;
+   questionText: text;
+ };
+type NumberEntry = 
+ record {
+   emoji: text;
+   value: nat;
+   wordLabel: text;
+ };
+type AnimalEntry = 
+ record {
+   emoji: text;
+   name: text;
+   sound: text;
+ };
+type AlphabetEntry = 
+ record {
+   emoji: text;
+   letter: text;
+   word: text;
+ };
+service : {
+  getAlphabet: () -> (vec AlphabetEntry) query;
+  getAnimals: () -> (vec AnimalEntry) query;
+  getNumbers: () -> (vec NumberEntry) query;
+  getQuizQuestions: () -> (vec QuizQuestion) query;
+}
